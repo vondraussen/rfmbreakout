@@ -1,0 +1,299 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x08 J1
+U 1 1 61AB4F6E
+P 4000 3275
+F 0 "J1" H 3918 3792 50  0000 C CNN
+F 1 "Conn_01x08" H 3918 3701 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 4000 3275 50  0001 C CNN
+F 3 "~" H 4000 3275 50  0001 C CNN
+	1    4000 3275
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x08 J2
+U 1 1 61AB5A83
+P 7475 3375
+F 0 "J2" H 7475 2875 50  0000 C CNN
+F 1 "Conn_01x08" V 7575 3325 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 7475 3375 50  0001 C CNN
+F 3 "~" H 7475 3375 50  0001 C CNN
+	1    7475 3375
+	1    0    0    1   
+$EndComp
+$Comp
+L RF_Module:RFM69HCW U1
+U 1 1 61AB79E1
+P 5675 3300
+F 0 "U1" H 5325 3750 50  0000 C CNN
+F 1 "RFM69HC" H 5900 3750 50  0000 C CNN
+F 2 "RF_Module:HOPERF_RFM9XW_SMD" H 2375 4950 50  0001 C CNN
+F 3 "https://www.hoperf.com/data/upload/portal/20181127/5bfcb8284d838.pdf" H 2375 4950 50  0001 C CNN
+	1    5675 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 61ABA8E2
+P 5675 4000
+F 0 "#PWR0101" H 5675 3750 50  0001 C CNN
+F 1 "GND" H 5680 3827 50  0000 C CNN
+F 2 "" H 5675 4000 50  0001 C CNN
+F 3 "" H 5675 4000 50  0001 C CNN
+	1    5675 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5575 3900 5575 3950
+Wire Wire Line
+	5575 3950 5675 3950
+Wire Wire Line
+	5675 3950 5675 4000
+Wire Wire Line
+	5675 3900 5675 3950
+Connection ~ 5675 3950
+Wire Wire Line
+	5675 3950 5775 3950
+Wire Wire Line
+	5775 3950 5775 3900
+$Comp
+L power:+3V3 #PWR0102
+U 1 1 61ABB714
+P 5675 2800
+F 0 "#PWR0102" H 5675 2650 50  0001 C CNN
+F 1 "+3V3" H 5690 2973 50  0000 C CNN
+F 2 "" H 5675 2800 50  0001 C CNN
+F 3 "" H 5675 2800 50  0001 C CNN
+	1    5675 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 61ABBDC7
+P 4300 3750
+F 0 "#PWR0103" H 4300 3500 50  0001 C CNN
+F 1 "GND" H 4305 3577 50  0000 C CNN
+F 2 "" H 4300 3750 50  0001 C CNN
+F 3 "" H 4300 3750 50  0001 C CNN
+	1    4300 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 3675 4300 3675
+Wire Wire Line
+	4300 3675 4300 3750
+Wire Wire Line
+	4200 2975 4300 2975
+Wire Wire Line
+	4300 2975 4300 3675
+Connection ~ 4300 3675
+$Comp
+L power:GND #PWR0104
+U 1 1 61ABC88A
+P 7200 3775
+F 0 "#PWR0104" H 7200 3525 50  0001 C CNN
+F 1 "GND" H 7205 3602 50  0000 C CNN
+F 2 "" H 7200 3775 50  0001 C CNN
+F 3 "" H 7200 3775 50  0001 C CNN
+	1    7200 3775
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7275 3575 7200 3575
+Wire Wire Line
+	7200 3575 7200 3775
+Text GLabel 7125 3675 0    39   Input ~ 0
+ANT
+Text GLabel 6275 3000 2    39   Input ~ 0
+ANT
+Wire Wire Line
+	6275 3000 6175 3000
+Wire Wire Line
+	7125 3675 7275 3675
+Text GLabel 6275 3200 2    39   Input ~ 0
+DIO5
+Text GLabel 6275 3300 2    39   Input ~ 0
+DIO4
+Text GLabel 6275 3400 2    39   Input ~ 0
+DIO3
+Text GLabel 6275 3500 2    39   Input ~ 0
+DIO2
+Text GLabel 6275 3600 2    39   Input ~ 0
+DIO1
+Text GLabel 6275 3700 2    39   Input ~ 0
+DIO0
+Wire Wire Line
+	6275 3700 6175 3700
+Wire Wire Line
+	6175 3600 6275 3600
+Wire Wire Line
+	6275 3500 6175 3500
+Wire Wire Line
+	6175 3400 6275 3400
+Wire Wire Line
+	6275 3300 6175 3300
+Wire Wire Line
+	6175 3200 6275 3200
+Text GLabel 5050 3000 0    39   Input ~ 0
+SCK
+Text GLabel 5050 3100 0    39   Input ~ 0
+MOSI
+Text GLabel 5050 3200 0    39   Input ~ 0
+MISO
+Text GLabel 5050 3300 0    39   Input ~ 0
+~SS
+Text GLabel 5050 3500 0    39   Input ~ 0
+RESET
+Wire Wire Line
+	5050 3500 5175 3500
+Wire Wire Line
+	5175 3300 5050 3300
+Wire Wire Line
+	5050 3200 5175 3200
+Wire Wire Line
+	5175 3100 5050 3100
+Wire Wire Line
+	5050 3000 5175 3000
+Text GLabel 4350 3475 2    39   Input ~ 0
+RESET
+Text GLabel 4350 3375 2    39   Input ~ 0
+~SS
+Text GLabel 4350 3075 2    39   Input ~ 0
+MISO
+Text GLabel 4350 3175 2    39   Input ~ 0
+MOSI
+Text GLabel 4350 3275 2    39   Input ~ 0
+SCK
+Wire Wire Line
+	4200 3075 4350 3075
+Wire Wire Line
+	4350 3175 4200 3175
+Wire Wire Line
+	4350 3275 4200 3275
+Wire Wire Line
+	4200 3375 4350 3375
+Wire Wire Line
+	4350 3475 4200 3475
+Text GLabel 4350 3575 2    39   Input ~ 0
+DIO5
+Wire Wire Line
+	4350 3575 4200 3575
+Text GLabel 7125 3475 0    39   Input ~ 0
+DIO3
+Text GLabel 7125 3375 0    39   Input ~ 0
+DIO4
+$Comp
+L power:+3V3 #PWR0105
+U 1 1 61AC9427
+P 7200 2850
+F 0 "#PWR0105" H 7200 2700 50  0001 C CNN
+F 1 "+3V3" H 7215 3023 50  0000 C CNN
+F 2 "" H 7200 2850 50  0001 C CNN
+F 3 "" H 7200 2850 50  0001 C CNN
+	1    7200 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7125 3375 7275 3375
+Wire Wire Line
+	7275 3475 7125 3475
+Wire Wire Line
+	7275 3275 7200 3275
+Wire Wire Line
+	7200 3275 7200 2850
+Text GLabel 7125 3175 0    39   Input ~ 0
+DIO0
+Text GLabel 7125 3075 0    39   Input ~ 0
+DIO1
+Text GLabel 7125 2975 0    39   Input ~ 0
+DIO2
+Wire Wire Line
+	7275 2975 7125 2975
+Wire Wire Line
+	7125 3075 7275 3075
+Wire Wire Line
+	7275 3175 7125 3175
+$Comp
+L Device:C_Small C1
+U 1 1 61ADF6FA
+P 6850 3425
+F 0 "C1" H 6942 3471 50  0001 L CNN
+F 1 "100nF" V 6750 3325 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 6850 3425 50  0001 C CNN
+F 3 "~" H 6850 3425 50  0001 C CNN
+	1    6850 3425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 3525 6850 3575
+Wire Wire Line
+	6850 3575 7200 3575
+Connection ~ 7200 3575
+Wire Wire Line
+	6850 3325 6850 3275
+Wire Wire Line
+	6850 3275 7200 3275
+Connection ~ 7200 3275
+$Comp
+L Connector:Conn_Coaxial J3
+U 1 1 61AEA7AA
+P 7475 4300
+F 0 "J3" H 7575 4275 50  0000 L CNN
+F 1 "Conn_Coaxial" H 7925 3950 50  0001 L CNN
+F 2 "Connector_Coaxial:U.FL_Molex_MCRF_73412-0110_Vertical" H 7475 4300 50  0001 C CNN
+F 3 " ~" H 7475 4300 50  0001 C CNN
+	1    7475 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J4
+U 1 1 61AEB06F
+P 7750 4050
+F 0 "J4" H 7850 4025 50  0000 L CNN
+F 1 "Conn_Coaxial" H 8100 3950 50  0001 L CNN
+F 2 "Connector_Coaxial:SMA_Molex_73251-2200_Horizontal" H 7750 4050 50  0001 C CNN
+F 3 " ~" H 7750 4050 50  0001 C CNN
+	1    7750 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 61AEBE06
+P 7475 4500
+F 0 "#PWR0106" H 7475 4250 50  0001 C CNN
+F 1 "GND" H 7480 4327 50  0000 C CNN
+F 2 "" H 7475 4500 50  0001 C CNN
+F 3 "" H 7475 4500 50  0001 C CNN
+	1    7475 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 61AEC34C
+P 7750 4250
+F 0 "#PWR0107" H 7750 4000 50  0001 C CNN
+F 1 "GND" H 7755 4077 50  0000 C CNN
+F 2 "" H 7750 4250 50  0001 C CNN
+F 3 "" H 7750 4250 50  0001 C CNN
+	1    7750 4250
+	1    0    0    -1  
+$EndComp
+Text GLabel 7275 4300 0    39   Input ~ 0
+ANT
+Text GLabel 7550 4050 0    39   Input ~ 0
+ANT
+$EndSCHEMATC
